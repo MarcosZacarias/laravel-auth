@@ -8,6 +8,12 @@
 
 @section('content')
   <section class="container mt-3">
+    <h1>List Projects</h1>
+
+    <a href="{{ route('admin.projects.create') }}" class="">
+        <button class="btn btn-outline-primary mb-3">Create new project</button>
+    </a>
+
     <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
         @forelse ($projects as $project)
         <div class="col">
