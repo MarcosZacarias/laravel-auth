@@ -4,7 +4,7 @@
 <section>
     <div class="container mt-5">
         <a href="{{ route('admin.projects.index') }}" class="">
-            <button class="btn btn-secondary mb-3">Return to the list</button>
+            <button class="btn btn-outline-secondary mb-3">Return to the list</button>
         </a>
 
         <h1>Create Project</h1>

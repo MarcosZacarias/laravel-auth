@@ -3,11 +3,11 @@
 @section('content')
   <section class="container mt-3">
     <a href="{{ route('admin.projects.index') }}" class="">
-      <button class="btn btn-secondary mb-3">Return to the list</button>
+      <button class="btn btn-outline-secondary mb-3">Return to the list</button>
   </a>
-  {{-- <a href="{{ route('admin.projects.edit', $project) }}" class="">
-      <button class="btn btn-warning mb-3">Edit project</button>
-  </a> --}}
+  <a href="{{ route('admin.projects.edit', $project) }}" class="">
+      <button class="btn btn-outline-warning mb-3">Edit project</button>
+  </a>
 
   <div class="row">
       <div class="col-4">
