@@ -14,10 +14,12 @@
             <div class="card h-100">
                 <img src="{{$project->img_path}}" class="card-img-top" alt="...">
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">{{$project->name}}</h5>
-                  <p class="">
-                    {{$project->description}}
-                  </p>
+                  <h5 class="card-title">
+                    <strong>Project Name: </strong> {{$project->name}}</h5>
+                  <ul>
+                    <li><strong>Created: </strong>{{$project->created_at}}</li>
+                    <li><strong>Udated: </strong>{{$project->updated_at}}</li>
+                  </ul>
                   <div class="d-flex justify-content-around mt-auto">
                       <a href="{{ route('admin.projects.show', $project->id) }}" class="mx-1">
                         <i class="fa-solid fa-up-right-from-square"></i>
