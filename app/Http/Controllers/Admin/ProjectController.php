@@ -112,11 +112,11 @@ class ProjectController extends Controller
                 'name.string' => 'The name must be a string',
                 'name.max' => 'The name must be a maximum of 25 characters',
 
-                'name_repo.required'=>'The name_repo is obligatory',
-                'name_repo.string' => 'The name_repo must be a string',
+                'name_repo.required'=>'The name repository is obligatory',
+                'name_repo.string' => 'The name repository must be a string',
 
-                'slug.required'=>'The name_repo is obligatory',
-                'slug.string' => 'The name_repo must be a string',
+                'slug.required'=>'The slug is obligatory',
+                'slug.string' => 'The slug must be a string',
                 
                 'img_path.required' => 'The image path is obligatory',
                 'img_path.string' => 'The image path must be a string',
