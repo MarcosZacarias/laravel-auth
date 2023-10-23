@@ -27,16 +27,16 @@
                     <li><strong>Udated: </strong>{{$project->updated_at}}</li>
                   </ul>
                   <div class="d-flex justify-content-around mt-auto">
-                      <a href="{{ route('admin.projects.show', $project->id) }}" class="mx-1">
-                        <i class="fa-solid fa-up-right-from-square"></i>
+                      <a href="{{ route('admin.projects.show', $project->id) }}" class="mx-1 btn btn-outline-primary">
+                        <i class="fa-solid fa-up-right-from-square"></i> <span>Info</span>
                       </a>
-                      <a href="{{ route('admin.projects.edit', $project) }}" class="mx-1">
-                        <i class="fa-solid fa-pencil"></i>
+                      <a href="{{ route('admin.projects.edit', $project) }}" class="mx-1 btn btn-outline-warning">
+                        <i class="fa-solid fa-pencil"></i> <span>Edit</span>
                       </a>
                       
                       <!-- Button trigger modal -->
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-{{$project->id}}" class="mx-1">
-                        <i class="fa-solid fa-trash text-danger"></i>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-{{$project->id}}" class="mx-1 btn btn-outline-danger">
+                        <i class="fa-solid fa-trash"></i> <span>Delete</span>
                       </a>
               
                       <!-- Modal -->
