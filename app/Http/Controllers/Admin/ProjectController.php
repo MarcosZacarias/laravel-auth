@@ -94,7 +94,7 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return redirect()->route('admin.project.index');
+        return redirect()->route('admin.projects.index');
     }
 
     private function validation($data, $id = null){
