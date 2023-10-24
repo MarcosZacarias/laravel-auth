@@ -103,7 +103,6 @@ class ProjectController extends Controller
             [
                 'name'=>'required|string|max:25',
                 'name_repo'=>'required|string',
-                'slug'=>'required|string',
                 'img_path'=>'required|string|url',
                 'description'=>'nullable|string',
             ],
@@ -114,9 +113,6 @@ class ProjectController extends Controller
 
                 'name_repo.required'=>'The name repository is obligatory',
                 'name_repo.string' => 'The name repository must be a string',
-
-                'slug.required'=>'The slug is obligatory',
-                'slug.string' => 'The slug must be a string',
                 
                 'img_path.required' => 'The image path is obligatory',
                 'img_path.string' => 'The image path must be a string',

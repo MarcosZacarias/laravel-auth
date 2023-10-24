@@ -65,19 +65,7 @@
                             @error('name_repo')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div>
-                        <div class="col-3">
-                            <label for="slug" class="form-label"><strong>Slug</strong></label>
-                            <input 
-                            type="text" 
-                            class="form-control @error('slug') is-invalid @enderror" 
-                            id="slug" 
-                            name="slug" 
-                            value="{{old('slug') ?? $project->slug}}">
-                            @error('slug')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
+                        </div>                        
                         <div class="col-12">
                             <label for="description" class="form-label"><strong>Description</strong></label>
                             <textarea 
