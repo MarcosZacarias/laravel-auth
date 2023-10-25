@@ -30,7 +30,7 @@
                       <a href="{{ route('admin.projects.show', $project->id) }}" class="mx-1 btn btn-outline-primary">
                         <i class="fa-solid fa-up-right-from-square"></i> <span>Info</span>
                       </a>
-                      <a href="{{ route('admin.projects.edit', $project) }}" class="mx-1 btn btn-outline-warning">
+                      <a href="{{ route('admin.projects.edit', $project) }}" class="mx-1 btn btn-outline-primary">
                         <i class="fa-solid fa-pencil"></i> <span>Edit</span>
                       </a>
                       
