@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -37,9 +39,9 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        $data = $this->validation($request->all());
+        $data = $request->validated();
         $project = new Project;
         $project->fill($data);
         $project->save();
@@ -75,9 +77,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
-        $data = $this->validation($request->all(), $project->id);
+        $data = $request->validated();
 
         $project->update($data);
 
@@ -95,32 +97,5 @@ class ProjectController extends Controller
         $project->delete();
 
         return redirect()->route('admin.projects.index');
-    }
-
-    private function validation($data, $id = null){
-        $validator = Validator::make(
-            $data, 
-            [
-                'name'=>'required|string|max:25',
-                'name_repo'=>'required|string',
-                'img_path'=>'required|string|url',
-                'description'=>'nullable|string',
-            ],
-            [
-                'name.required'=>'The name is obligatory',
-                'name.string' => 'The name must be a string',
-                'name.max' => 'The name must be a maximum of 25 characters',
-
-                'name_repo.required'=>'The name repository is obligatory',
-                'name_repo.string' => 'The name repository must be a string',
-                
-                'img_path.required' => 'The image path is obligatory',
-                'img_path.string' => 'The image path must be a string',
-                'img_path.url' => 'The image path must be a URI',
-
-                'description.string'=> 'The description must be a string',                
-            ],
-        )->validate();
-        return $validator;
     }
 }
