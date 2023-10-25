@@ -69,7 +69,8 @@
                         <div class="col-12">
                             <label for="description" class="form-label"><strong>Description</strong></label>
                             <textarea 
-                            type="text" 
+                            type="text"
+                            rows="5"
                             class="form-control @error('description') is-invalid @enderror" 
                             id="description" 
                             name="description">
